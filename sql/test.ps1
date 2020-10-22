@@ -1,7 +1,5 @@
-$server  ="b3a183f5d5b1"
-
 $username ="sa"
-$pwd ="P@ssword"
+$pwd1 ="P@ssword"
 
 $rootfolder = $PSScriptRoot
 
@@ -15,5 +13,5 @@ foreach ($file in $files)
 {
  [string]$content = get-content -path $file.FullName
 
- Invoke-Sqlcmd -ServerInstance "b3a183f5d5b1"  -Database "master" -Query $content -Username $username -Password $pwd
+ Invoke-Sqlcmd -ServerInstance "b3a183f5d5b1"  -Database "master" -Query $content -Username $username -Password $pwd1
 }
